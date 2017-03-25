@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Example 9</title>
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1">	
+<link rel="stylesheet" 
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script type="text/javascript" 
+        src="https://code.jquery.com/jquery-2.1.3.min.js">
+</script>
+<script type="text/javascript" 
+        src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+</script>
+</head>
+
+  <body>
+
+  <div data-role="page">
+
+    <div data-role="header">
+      <h1>Form</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+
+      <form action="echo.html" method="post">
+
+          <!--FOR THE EXAM:  format as JQM controls-->
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value=""  />
+        </div>	
+
+        <div>
+            <label for="bio">Bio:</label>
+            <textarea name="bio" id="bio"></textarea>
+        </div>	
+
+          <!--FOR THE EXAM:  format as a JQM flipswitch with the values as "Yes" and "No" -->     
+          <label for="undergrad">Undergrad:</label>
+          <input type="checkbox" name="undergrad" 
+          id="undergrad">
+
+           <!--FOR THE EXAM:  format as a JQM set of radio buttons -->         
+        <fieldset>
+              <legend>Favorite Movie:</legend>
+
+              <input type="radio">
+              <label for="classStanding">Freshman</label> 
+
+              <input type="radio">
+              <label for="classStanding2">Sophomore</label> 
+
+              <input type="radio">
+              <label for="classStanding3">Junior</label>
+
+              <input type="radio">
+              <label for="classStanding4">Senior</label>
+          </fieldset>
+
+            <!--FOR THE EXAM:  format as a JQM slider with range of 18-70 with the default value as 20 -->  
+        <div>
+              <label for="Age">Your age:</label>
+              <input type="range" >
+        </div>
+
+        <div>
+            <input type="submit" name="submit" value="Send"  />
+        </div>	
+
+      </form>
+    </div>
+  </div>
+
+
+  <style>
+    .custom-size-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
+        text-indent: -5.9em;
+    }
+    .custom-size-flipswitch.ui-flipswitch .ui-flipswitch-off {
+        text-indent: 0.5em;
+    }
+    /* Custom widths are needed because the length of custom labels differs from
+       the length of the standard labels */
+    .custom-size-flipswitch.ui-flipswitch {
+        width: 8.875em;
+    }
+    .custom-size-flipswitch.ui-flipswitch.ui-flipswitch-active {
+        padding-left: 7em;
+        width: 1.875em;
+    }
+    @media (min-width: 28em) {
+        // Repeated from rule .ui-flipswitch above
+        .ui-field-contain > label + .custom-size-flipswitch.ui-flipswitch {
+            width: 1.875em;
+        }
+    }
+  </style>
+  </body>
+</html>
